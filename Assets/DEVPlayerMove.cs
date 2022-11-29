@@ -38,7 +38,6 @@ public class DEVPlayerMove : MonoBehaviour
         
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        float y = Input.GetAxis("Vertical");
         Vector3 move;
         if (debugMovement == false)
         {
@@ -63,10 +62,12 @@ public class DEVPlayerMove : MonoBehaviour
 
             controller.Move(velocity * Time.deltaTime);
             controller.Move(move * baseSpeed * speedModifier * Time.deltaTime);
+            Debug.Log(debugMovement);
         }
         else
         {
             controller.Move((Vector3.right * x + Vector3.forward * z) * Time.deltaTime);
+            Debug.Log(debugMovement);
         }
 
 
