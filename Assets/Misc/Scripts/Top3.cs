@@ -7,6 +7,7 @@ using UnityEngine;
 public class Top3 : MonoBehaviour
 {
     MusicSettings settings;
+    public GameObject Sphere;
     //public GameObject sphere;
     //public GameObject cube;
     public string bestGame = "";
@@ -18,8 +19,12 @@ public class Top3 : MonoBehaviour
 
         // if (settings.bestSongEver != "NULL" && != )
         Debug.Log(settings.bestSongEver + ", " + bestGame + ", " + bestMovie);
-        
-
+         
+        if (Sphere != null)
+        {
+            settings = Sphere.GetComponent<MusicSettings>();
+            Debug.Log(settings.bestSongEver);
+        }
 
 
     }
