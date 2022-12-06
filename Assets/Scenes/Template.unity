@@ -353,7 +353,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509104619}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce40dc7e1e9fc2a418362689618cfa15, type: 3}
   m_Name: 
@@ -523,8 +523,8 @@ GameObject:
   m_Component:
   - component: {fileID: 676198750}
   - component: {fileID: 676198749}
-  - component: {fileID: 676198751}
-  - component: {fileID: 676198752}
+  - component: {fileID: 676198753}
+  - component: {fileID: 676198754}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -541,7 +541,7 @@ CharacterController:
   m_GameObject: {fileID: 676198748}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
@@ -568,7 +568,7 @@ Transform:
   m_Father: {fileID: 610358687}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &676198751
+--- !u!114 &676198753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -577,21 +577,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 676198748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d46ceaee1de65e4d9b6e6d4f15c91de, type: 3}
+  m_Script: {fileID: 11500000, guid: 399a053a6a8b87b448aa996c4b6aa45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 676198749}
-  baseSpeed: 15
-  speedModifier: 1
-  baseJump: 8
-  jumpModifier: 1
-  groundCheck: {fileID: 1067837882}
-  groundDistance: 0.4
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 8
-  gravity: 60
---- !u!54 &676198752
+  PlayerCamera: {fileID: 509104620}
+  PlayerBody: {fileID: 676198754}
+  Speed: 12
+  Sensitivity: 8
+  Jumpforce: 0
+--- !u!54 &676198754
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -605,7 +599,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &1067837881
 GameObject:
@@ -965,7 +959,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1688226315}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
